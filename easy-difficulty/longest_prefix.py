@@ -4,10 +4,22 @@ class Solution(object):
         :type strs: List[str]
         :rtype: str
         """
+        prefix = ""
+        temp = ""
+        if len(strs) == 0:
+            return ""
+                
+        smallest = strs[0]
 
-        substr = ""
+        for word in strs:
+            if len(word) < len(smallest):
+                smallest = word
 
-        for str in strs:
-            for i in str:
-                 
-        
+        for i in range(len(smallest)):
+            for word in strs:
+                if smallest[i] != word[i]:
+                    return prefix
+            prefix += smallest[i]
+            
+
+        return prefix
