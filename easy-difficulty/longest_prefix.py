@@ -23,3 +23,10 @@ class Solution(object):
             
 
         return prefix
+
+
+a = {}
+a[0] = "top"
+a[10] = "to"
+for i in a:
+    print(i)
